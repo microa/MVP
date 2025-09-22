@@ -1,0 +1,65 @@
+# Default configuration for MVP detector
+
+# Model settings
+model:
+  id: "google/owlv2-large-patch14-ensemble"
+  device: "auto"  # auto, cuda, cpu
+  confidence_threshold: 0.5
+
+# Processing settings
+processing:
+  single_class_fail_limit: 2
+  area_scale_threshold: 2.0
+  extract_frames: true
+
+# Motion vector settings
+motion_vector:
+  min_displacement: 1.0  # Minimum displacement to consider
+  translation_std_threshold: 1.0  # Standard deviation threshold for translation
+  scaling_std_threshold: 0.1  # Standard deviation threshold for scaling
+
+# Evaluation settings
+evaluation:
+  iou_thresholds: [0.2, 0.3, 0.5]
+  iou_range: [0.5, 0.95]  # For mAP@[0.5:0.95]
+  num_classes: 30
+
+# ImageNet VID classes
+classes:
+  - "airplane"
+  - "antelope"
+  - "bear"
+  - "bicycle"
+  - "bird"
+  - "bus"
+  - "car"
+  - "cattle"
+  - "dog"
+  - "domestic cat"
+  - "elephant"
+  - "fox"
+  - "giant panda"
+  - "hamster"
+  - "horse"
+  - "lion"
+  - "lizard"
+  - "monkey"
+  - "motorcycle"
+  - "rabbit"
+  - "red panda"
+  - "sheep"
+  - "snake"
+  - "squirrel"
+  - "tiger"
+  - "train"
+  - "turtle"
+  - "watercraft"
+  - "whale"
+  - "zebra"
+
+# Paths (will be overridden by command line arguments)
+paths:
+  video_root: ""
+  motion_vector_root: ""
+  output_root: ""
+  ground_truth_root: ""
