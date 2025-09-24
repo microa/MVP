@@ -173,10 +173,10 @@ The MVP framework achieves competitive performance on ImageNet VID dataset with 
 If you use this code in your research, please cite our paper:
 
 ```bibtex
-@inproceedings{mvp2025,
+@article{huang2025mvp,
   title={MVP: Motion Vector Propagation for Zero-Shot Video Object Detection},
-  author={Binhua Huang, Ni Wang, Wendong Yao, Soumyabrata Dev},
-  booktitle={2025},
+  author={Huang, Binhua and Wang, Ni and Yao, Wendong and Dev, Soumyabrata},
+  journal={arXiv preprint arXiv:2509.18388},
   year={2025}
 }
 ```
